@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gray-900;
+}
+
+/* Optimize paint and composite operations */
+.project-card,
+.builder-card {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Prevent content shift during image load */
+img {
+  @apply transition-opacity duration-300;
+}
+
+img:not([src]) {
+  @apply opacity-0;
+}
+
+/* Optimize animations */
+* {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}

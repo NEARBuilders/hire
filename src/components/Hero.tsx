@@ -38,7 +38,7 @@ export default function Hero() {
           </div>
           
           <div className="mt-16 px-4 py-2 bg-white/5 rounded-full text-sm text-gray-400">
-            Trusted by 100+ founders • Average MVP delivery: 3 weeks
+            Trusted by 100+ founders • Average MVP delivery: 3 days
           </div>
         </div>
       </div>

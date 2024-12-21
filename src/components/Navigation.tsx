@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { HardHat } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { HardHat } from "lucide-react";
 
 export default function Navigation() {
   return (
@@ -10,9 +10,12 @@ export default function Navigation() {
             <HardHat size={32} className="text-yellow-400" />
             <span className="text-xl font-bold text-white">Build DAO</span>
           </Link>
-          
+
           <div className="flex items-center gap-8">
-            <Link to="/process" className="text-gray-300 hover:text-white transition-colors">
+            <Link
+              to="/process"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
               Our Process
             </Link>
             <Link

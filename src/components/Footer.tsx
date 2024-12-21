@@ -1,5 +1,5 @@
-import { Github } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -25,15 +25,23 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/submit" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  to="/submit"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Submit Project
                 </Link>
               </li>
               <li>
-                <Link to="/process" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  to="/process"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Our Process
                 </Link>
               </li>
@@ -60,12 +68,18 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
             <ul className="space-y-2">
               <li>
-                <a href="mailto:hire@nearbuilders.org" className="text-gray-400 hover:text-white transition-colors">
-                hire@nearbuilders.org
+                <a
+                  href="mailto:hire@nearbuilders.org"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  hire@nearbuilders.org
                 </a>
               </li>
               <li>
-                <a href="https://nearbuilders.com/tg-builders" className="text-gray-400 hover:text-white transition-colors">
+                <a
+                  href="https://nearbuilders.com/tg-builders"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Telegram Community
                 </a>
               </li>
@@ -78,10 +92,16 @@ export default function Footer() {
             © {currentYear} Build DAO. All rights reserved.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <a
+              href="#"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
+            >
               Privacy Policy
             </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <a
+              href="#"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
+            >
               Terms of Service
             </a>
           </div>

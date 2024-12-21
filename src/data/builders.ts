@@ -26,19 +26,19 @@ export const BUILDERS: Builder[] = [
     social: {
       github: "https://github.com",
       linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com"
+      twitter: "https://twitter.com",
     },
     bio: "Full stack developer with 8+ years of experience in web3 technologies and distributed systems.",
     experience: [
       "Led development of multiple DeFi protocols",
       "Contributed to major open-source blockchain projects",
-      "Developed high-performance trading systems"
+      "Developed high-performance trading systems",
     ],
     achievements: [
       "ETHGlobal hackathon winner",
       "Published research on smart contract optimization",
-      "Core contributor to popular DeFi protocols"
-    ]
+      "Core contributor to popular DeFi protocols",
+    ],
   },
   {
     id: "elena-chen",
@@ -49,19 +49,19 @@ export const BUILDERS: Builder[] = [
     projects: ["DAO Governance", "DeFi Protocol"],
     social: {
       github: "https://github.com",
-      linkedin: "https://linkedin.com"
+      linkedin: "https://linkedin.com",
     },
     bio: "Smart contract engineer specializing in DeFi protocols and security auditing.",
     experience: [
       "Security auditor for major DeFi protocols",
       "Developed innovative yield farming strategies",
-      "Created secure multi-sig wallet implementations"
+      "Created secure multi-sig wallet implementations",
     ],
     achievements: [
       "Found and patched critical vulnerabilities",
       "Developed industry-standard security patterns",
-      "Regular speaker at blockchain conferences"
-    ]
+      "Regular speaker at blockchain conferences",
+    ],
   },
   {
     id: "marcus-johnson",
@@ -72,18 +72,18 @@ export const BUILDERS: Builder[] = [
     projects: ["Crypto Wallet UI", "NFT Gallery"],
     social: {
       twitter: "https://twitter.com",
-      linkedin: "https://linkedin.com"
+      linkedin: "https://linkedin.com",
     },
     bio: "Product designer focused on creating intuitive and engaging web3 experiences.",
     experience: [
       "Designed interfaces for popular crypto wallets",
       "Created comprehensive design systems",
-      "Led user research for DeFi applications"
+      "Led user research for DeFi applications",
     ],
     achievements: [
       "Best Design Award at Web3 Summit",
       "Published case studies on web3 UX",
-      "Mentor for blockchain design programs"
-    ]
-  }
+      "Mentor for blockchain design programs",
+    ],
+  },
 ];

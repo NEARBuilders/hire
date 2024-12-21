@@ -1,10 +1,10 @@
-import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Clock, Trophy, Lightbulb, Target } from 'lucide-react';
-import { PROJECTS } from '../data/projects';
+import { useParams, Link } from "react-router-dom";
+import { ArrowLeft, Clock, Trophy, Lightbulb, Target } from "lucide-react";
+import { PROJECTS } from "../data/projects";
 
 export default function ProjectPage() {
   const { id } = useParams();
-  const project = PROJECTS.find(p => p.id === id);
+  const project = PROJECTS.find((p) => p.id === id);
 
   if (!project) {
     return (
@@ -22,19 +22,28 @@ export default function ProjectPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-16">
       <div className="container mx-auto px-6">
-        <Link to="/" className="inline-flex items-center text-yellow-400 hover:text-yellow-300 mb-8">
+        <Link
+          to="/"
+          className="inline-flex items-center text-yellow-400 hover:text-yellow-300 mb-8"
+        >
           <ArrowLeft className="mr-2" size={20} />
           Back to Projects
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <img src={project.image} alt={project.title} className="w-full h-96 object-cover rounded-xl" />
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-96 object-cover rounded-xl"
+            />
           </div>
 
           <div>
             <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
-            <p className="text-gray-300 text-lg mb-6">{project.fullDescription || project.description}</p>
+            <p className="text-gray-300 text-lg mb-6">
+              {project.fullDescription || project.description}
+            </p>
 
             <div className="flex items-center gap-2 mb-6">
               <Clock size={20} className="text-yellow-400" />
@@ -43,7 +52,10 @@ export default function ProjectPage() {
 
             <div className="flex flex-wrap gap-2 mb-8">
               {project.technologies.map((tech) => (
-                <span key={tech} className="px-4 py-2 bg-gray-800 rounded-full text-sm text-gray-300">
+                <span
+                  key={tech}
+                  className="px-4 py-2 bg-gray-800 rounded-full text-sm text-gray-300"
+                >
                   {tech}
                 </span>
               ))}
@@ -51,7 +63,9 @@ export default function ProjectPage() {
 
             {project.testimonial && (
               <blockquote className="border-l-4 border-yellow-400 pl-6 mb-8">
-                <p className="text-lg italic text-gray-300 mb-2">"{project.testimonial.text}"</p>
+                <p className="text-lg italic text-gray-300 mb-2">
+                  "{project.testimonial.text}"
+                </p>
                 <footer className="text-gray-400">
                   {project.testimonial.author} • {project.testimonial.role}
                 </footer>
@@ -69,7 +83,9 @@ export default function ProjectPage() {
               </div>
               <ul className="space-y-2">
                 {project.challenges.map((challenge, index) => (
-                  <li key={index} className="text-gray-300">• {challenge}</li>
+                  <li key={index} className="text-gray-300">
+                    • {challenge}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -83,7 +99,9 @@ export default function ProjectPage() {
               </div>
               <ul className="space-y-2">
                 {project.solutions.map((solution, index) => (
-                  <li key={index} className="text-gray-300">• {solution}</li>
+                  <li key={index} className="text-gray-300">
+                    • {solution}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -97,7 +115,9 @@ export default function ProjectPage() {
               </div>
               <ul className="space-y-2">
                 {project.results.map((result, index) => (
-                  <li key={index} className="text-gray-300">• {result}</li>
+                  <li key={index} className="text-gray-300">
+                    • {result}
+                  </li>
                 ))}
               </ul>
             </div>

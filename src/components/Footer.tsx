@@ -40,7 +40,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold text-white mb-4">Resources</h3>
             <ul className="space-y-2">
               <li>
@@ -54,19 +54,19 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
             <ul className="space-y-2">
               <li>
-                <a href="mailto:hello@builddao.xyz" className="text-gray-400 hover:text-white transition-colors">
-                  hello@builddao.xyz
+                <a href="mailto:hire@nearbuilders.org" className="text-gray-400 hover:text-white transition-colors">
+                hire@nearbuilders.org
                 </a>
               </li>
               <li>
-                <a href="https://discord.gg/builddao" className="text-gray-400 hover:text-white transition-colors">
-                  Discord Community
+                <a href="https://nearbuilders.com/tg-builders" className="text-gray-400 hover:text-white transition-colors">
+                  Telegram Community
                 </a>
               </li>
             </ul>

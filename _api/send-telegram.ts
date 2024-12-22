@@ -25,7 +25,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
 📋 Project Name: ${projectName}
 
-📝 Description: ${description}
+📝 Description:
+
+"${description}"
 
 ⏰ Timeline: ${timeline === "custom" ? customTimeline : timeline}
 

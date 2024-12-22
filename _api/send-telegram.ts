@@ -45,7 +45,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         body: JSON.stringify({
           chat_id: process.env.TELEGRAM_CHANNEL_ID,
           text: message,
-          thread_id: process.env.TELEGRAM_THREAD_ID,
+          message_thread_id: process.env.TELEGRAM_THREAD_ID,
           parse_mode: "HTML",
         }),
       },

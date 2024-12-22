@@ -16,34 +16,40 @@ export default function SubmitProject() {
     projectName: "",
     description: "",
     timeline: "",
-    contact: ""
+    contact: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
-    if (!formData.projectName || !formData.description || !formData.contact || 
-        (formData.timeline === 'custom' ? !formData.customTimeline : !formData.timeline)) {
+    if (
+      !formData.projectName ||
+      !formData.description ||
+      !formData.contact ||
+      (formData.timeline === "custom"
+        ? !formData.customTimeline
+        : !formData.timeline)
+    ) {
       alert("Please fill in all fields");
       return;
     }
 
     try {
       setIsSubmitting(true);
-      const response = await fetch('/api/send-telegram', {
-        method: 'POST',
+      const response = await fetch("/api/send-telegram", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
         const error = await response.json();
-        throw new Error(error.message || 'Failed to send contact');
+        throw new Error(error.message || "Failed to send contact");
       }
 
       // Clear form on success
@@ -52,22 +58,30 @@ export default function SubmitProject() {
         description: "",
         timeline: "",
         customTimeline: "",
-        contact: ""
+        contact: "",
       });
-      
-      alert('Project submitted successfully! We will get back to you soon.');
+
+      alert("Project submitted successfully! We will get back to you soon.");
     } catch (error) {
-      alert(error instanceof Error ? error.message : 'Failed to submit project. Please try again.');
+      alert(
+        error instanceof Error
+          ? error.message
+          : "Failed to submit project. Please try again.",
+      );
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -123,7 +137,7 @@ export default function SubmitProject() {
                 <label className="block text-sm font-medium text-gray-300 mb-2">
                   Timeline
                 </label>
-                <select 
+                <select
                   name="timeline"
                   value={formData.timeline}
                   onChange={handleInputChange}
@@ -135,7 +149,7 @@ export default function SubmitProject() {
                   <option value="1-month">1 month</option>
                   <option value="custom">Custom timeline</option>
                 </select>
-                {formData.timeline === 'custom' && (
+                {formData.timeline === "custom" && (
                   <input
                     type="text"
                     name="customTimeline"
@@ -165,10 +179,10 @@ export default function SubmitProject() {
                 type="submit"
                 disabled={isSubmitting}
                 className={`w-full py-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg font-semibold text-gray-900 hover:opacity-90 transition-opacity ${
-                  isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+                  isSubmitting ? "opacity-50 cursor-not-allowed" : ""
                 }`}
               >
-                {isSubmitting ? 'Submitting...' : 'Submit Project'}
+                {isSubmitting ? "Submitting..." : "Submit Project"}
               </button>
             </form>
           </div>

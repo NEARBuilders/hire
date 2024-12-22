@@ -8,7 +8,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <HardHat size={32} className="text-yellow-400" />
-            <span className="text-xl font-bold text-white">Build DAO</span>
+            {/* <span className="text-xl font-bold text-white">Build DAO</span> */}
           </Link>
 
           <div className="flex items-center gap-8">

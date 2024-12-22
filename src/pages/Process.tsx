@@ -84,9 +84,9 @@ export default function Process() {
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="text-xl font-semibold">{step.title}</h3>
-                      <span className="text-sm text-yellow-400 bg-yellow-400/10 px-3 py-1 rounded-full">
+                      {/* <span className="text-sm text-yellow-400 bg-yellow-400/10 px-3 py-1 rounded-full">
                         {step.duration}
-                      </span>
+                      </span> */}
                     </div>
                     <p className="text-gray-300">{step.description}</p>
                   </div>

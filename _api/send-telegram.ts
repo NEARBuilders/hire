@@ -6,14 +6,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    const { projectName, description, timeline, customTimeline, email } =
+    const { projectName, description, timeline, customTimeline, contact } =
       req.body;
 
     // Validate required fields
     if (
       !projectName ||
       !description ||
-      !email ||
+      !contact ||
       !(timeline || customTimeline)
     ) {
       return res.status(400).json({ message: "Missing required fields" });
@@ -29,7 +29,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
 ⏰ Timeline: ${timeline === "custom" ? customTimeline : timeline}
 
-📧 Contact Email: ${email}
+📧 Contact: ${contact}
     `;
 
     // Send to Telegram

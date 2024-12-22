@@ -9,10 +9,10 @@ export default async function handler(
   }
 
   try {
-    const { projectName, description, timeline, customTimeline, contact } = req.body;
+    const { projectName, description, timeline, customTimeline, email } = req.body;
 
     // Validate required fields
-    if (!projectName || !description || !contact || !(timeline || customTimeline)) {
+    if (!projectName || !description || !email || !(timeline || customTimeline)) {
       return res.status(400).json({ message: 'Missing required fields' });
     }
 
@@ -26,7 +26,7 @@ export default async function handler(
 
 ⏰ Timeline: ${timeline === 'custom' ? customTimeline : timeline}
 
-📧 Contact: ${contact}
+📧 Contact Email: ${email}
     `;
 
     // Send to Telegram
